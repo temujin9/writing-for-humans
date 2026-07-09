@@ -14,6 +14,7 @@ Two cautions before applying it:
 - Sentence patterns
 - Structure and formatting
 - Tone
+- Worldbuilding and fiction
 
 ## Vocabulary
 
@@ -84,6 +85,24 @@ Delete these; the sentence usually survives intact.
 - Uniform enthusiasm: everything "exciting" or "fascinating". Flat is fine; earned emphasis lands harder.
 - Register inflation to sound authoritative: "utilize", "individuals", "commence" for "use", "people", "start". Specificity is the authority; formality is costume.
 - Decorative analogies and vivid images. An analogy earns its place only when it is the clearest available statement of the point; otherwise it is ornament.
+
+## Worldbuilding and fiction
+
+Creative prose has its own filler register: vagueness performing depth.
+These read as atmosphere and carry nothing.
+
+- Mystery-mongering: "lost to time", "shrouded in mystery", "none now
+  remember", "some say", "worth never quite saying", the answer withheld to
+  simulate wonder. If the work knows the answer, state it. If it doesn't,
+  make the ambiguity a deliberate, named choice (competing accounts, a
+  recorded dispute), not a shrug; and remember that in-world practitioners
+  are not mystified by their own business.
+- Portent without event: "little did they know", "would prove to be", "a
+  chill wind blew" as significance-signaling. Foreshadow with facts the
+  reader can later check, or cut.
+- The epithet parade: rotating titles for one entity ("the ancient one",
+  "the dark sovereign", "the nameless king"). Elegant variation in a cloak;
+  pick the name and use it.
 
 ## Sources
 
