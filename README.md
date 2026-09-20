@@ -9,7 +9,7 @@ An agent skill that teaches language models to write prose that reads like a per
 The ten rules apply to everything. Two audiences add rules of their own, and SKILL.md tells the model which file to read before drafting:
 
 - Games, fiction, and worldbuilding: the "Worldbuilding and fiction" section of ai-tells.md (mystery-mongering, portent without event, the epithet parade) plus the rule-exception-example order in elements-of-style.md.
-- Technical documentation for international readers: technical-documentation.md, which follows ASD-STE100 Issue 9 where feasible (sentence limits of 20 and 25 words, imperative steps, one instruction per sentence, no contractions, no semicolons, no "-ing" verb forms, articles kept, "must" and "can" in place of "should" and "may") and adapts the parts that were written for aircraft maintenance. Where it conflicts with the base rules (rhythm, prose over lists, contractions), it wins.
+- Technical documentation for international readers: technical-documentation.md, which follows ASD-STE100 Issue 9 where feasible (sentence limits of 20 and 25 words, imperative steps, one instruction per sentence, no contractions, no semicolons, no "-ing" verb forms, articles kept, "must" and "can" in place of "should" and "may") and adapts the parts that were written for aircraft maintenance, supplemented with sentence-level and page-level rules from Google's Technical Writing course, GOV.UK, plainlanguage.gov, Microsoft, Mailchimp, 18F, Kubernetes, MDN, and Diátaxis. Where it conflicts with the base rules (rhythm, prose over lists, contractions, bold), it wins. Vale is documented there as an optional mechanical checker; it is not bundled.
 
 ## Cross-model design
 
