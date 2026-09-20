@@ -1,13 +1,25 @@
 ---
 name: writing-for-humans
-description: Style rules for clear, concrete prose that reads like a person wrote it, free of AI mannerisms. Use when writing anything a human will read (documentation, articles, blog posts, emails, reports, summaries, README files, release notes, UI copy, conversational answers) and when asked to edit, polish, humanize, or make text "sound less like AI". Covers what to cut, what to say instead, and when formatting helps rather than hurts.
+description: Style rules for clear, concrete prose that reads like a person wrote it, free of AI mannerisms. Use when writing anything a human will read (documentation, articles, blog posts, emails, reports, summaries, README files, release notes, UI copy, conversational answers) and when asked to edit, polish, humanize, or make text "sound less like AI". Covers what to cut, what to say instead, and when formatting helps rather than hurts. Includes an audience profile for technical documentation that non-native readers or translators will use (user guides, install and configuration guides, API references, runbooks), based on ASD-STE100 Simplified Technical English, and one for games, fiction, and worldbuilding.
+license: MIT
 ---
 
 # Writing for humans
 
 Machine-flavored prose has one root failure: it performs writing instead of informing. Emphasis without facts, structure without need, and hedges without doubt all imitate how good writing sounds while carrying nothing. Every rule below is the same instruction in a different form: have something to say, say it plainly, and stop.
 
+In practice: write in paragraphs, start at the point, state the fact instead of the adjective, join clauses with a comma, a colon, or a period (never an em dash), and stop at the last point.
+
 Scope: prose a person will read. Code, identifiers, and machine-read output are exempt. If the platform or task dictates a structure (a template, a fixed report format), keep the structure and apply these rules to the sentences inside it.
+
+## Audiences
+
+The ten rules apply to everything. Two audiences add rules of their own. Decide which one applies before you draft, and read its reference first.
+
+- Games, fiction, and worldbuilding: apply the rules as written, plus the "Worldbuilding and fiction" section of [references/ai-tells.md](references/ai-tells.md) (mystery-mongering, portent without event, the epithet parade) and the rule-exception-example order in [references/elements-of-style.md](references/elements-of-style.md).
+- Technical documentation for international readers, meaning user guides, install and configuration guides, API references, runbooks, release notes, UI help, and any document a non-native speaker or a translator will read: read [references/technical-documentation.md](references/technical-documentation.md) before you write. It follows ASD-STE100 Simplified Technical English where feasible. Where it conflicts with rules 7, 8, and 10 below (rhythm, prose over lists, contractions), that file wins. When the text is documentation and you do not know who will read it, use this profile.
+
+Everything else (articles, essays, emails, answers, reports) uses the rules as written.
 
 ## Rules
 
@@ -23,18 +35,22 @@ Scope: prose a person will read. Code, identifiers, and machine-read output are 
 > "The library serves as a wrapper for the API." → "The library wraps the API."
 
 **4. Say it; don't announce it.** Delete sentences about the writing instead of the subject: previews ("In this section we'll explore..."), significance claims ("This marks a pivotal shift..."), summaries that restate what the reader just read, and morals stapled to the end ("Ultimately, X reminds us that..."). The trailing participle is the clause-level version, vague analysis attached to a fact ("..., highlighting the importance of collaboration"): end at the fact. Test: if it would fit unchanged in a document on a different topic, it says nothing. Cut it.
+> "In this section, we'll walk through how the scheduler assigns work. The scheduler assigns each job to the least-loaded node." → "The scheduler assigns each job to the least-loaded node."
 
 **5. Don't fake insight with stock structures.** The false contrast asserts Y by denying an X nobody claimed: "It's not just X, it's Y", "This isn't about X. It's about Y.", "No X. No Y. Just Z." Assert Y directly; mention X only if someone actually believes it. The manufactured triad picks three parallel items for cadence, not content ("faster, cleaner, and more reliable"): if you have two points, list two. Reserve parallel form for genuinely parallel ideas.
 
 **6. Hedge once or not at all, and name your sources.** Where uncertainty is real, qualify once and give the reason ("probably X, since the logs only cover one region"). Stacked qualifiers ("could potentially, in some cases") are evasion, and so is anonymous authority ("experts argue", "industry reports suggest"): name the source or drop the claim. When asked for a judgment, give one.
+> "Experts suggest this could potentially reduce costs in some cases." → "This cut our bill by 30% last quarter, per the March finance report. Other workloads will differ."
 
-**7. Vary the rhythm.** Uniform sentence lengths and same-shaped paragraphs read as generated. Mix short sentences with long ones, and break any pattern you catch yourself repeating across sentences, bullets, or sections.
+**7. Vary the rhythm.** Uniform sentence lengths and same-shaped paragraphs read as generated. Mix short sentences with long ones, and break any pattern you catch yourself repeating across sentences, bullets, or sections. The technical-documentation profile turns this rule off: there, uniform short sentences are the goal.
 
-**8. Prose first; format on demand.** Default to paragraphs. Use bullets only for items a reader will scan or count, headings only when the reader will navigate by them, tables only for values compared across rows and columns. `**Term:** explanation` bullets are not a default mode of exposition. If the points connect, that's a paragraph. Bold marks the first use of a defined term; beyond that, bold little or nothing.
+**8. Prose first; format on demand.** Default to paragraphs. Use bullets only for items a reader will scan or count, headings only when the reader will navigate by them, tables only for values compared across rows and columns. `**Term:** explanation` bullets are not a default mode of exposition. If the points connect, that's a paragraph. Bold marks the first use of a defined term; beyond that, bold little or nothing. Procedures written for the technical-documentation profile are numbered steps, one action each; that file says how.
+> "**Latency:** 300 ms. **Throughput:** 2,000 requests per second." → "Latency is 300 ms at 2,000 requests per second."
 
 **9. Never use an em dash.** Rewrite with a comma, parentheses, a colon, or two sentences, and don't fake one with a spaced or doubled hyphen. The mark is legitimate English, but it has become the strongest single AI fingerprint, and any per-paragraph allowance gets abused in practice, so the allowance is zero. Punctuate quietly in general: semicolons and exclamation marks sparingly, at most one parenthetical aside per paragraph (rewrites of banned dashes like to pile up there), no emoji unless the venue uses them, sentence case for headings.
 
-**10. Match the reader's register, consistently.** Contractions belong anywhere you would speak them. Plain words over formal ones: use, not utilize; people, not individuals; start, not commence. Call the same thing by the same name throughout; rotating synonyms implies distinctions you don't intend. And don't perform the relationship: no praise of the question, no "let's explore", no enthusiasm the content didn't earn.
+**10. Match the reader's register, consistently.** Contractions belong anywhere you would speak them. Plain words over formal ones: use, not utilize; people, not individuals; start, not commence. Call the same thing by the same name throughout; rotating synonyms implies distinctions you don't intend. And don't perform the relationship: no praise of the question, no "let's explore", no enthusiasm the content didn't earn. The technical-documentation profile drops contractions; the rest of this rule stays.
+> "Great question! Let's explore how to utilize the endpoint." → "Call the search endpoint with the query string."
 
 ## Revision pass
 
@@ -47,10 +63,12 @@ After drafting, reread once as an editor:
 5. Search for em dashes and remove every one (rule 9). Then count bold spans and bullets; if either looks like a habit rather than a choice, halve it.
 6. Read a middle paragraph as if aloud. If you wouldn't say it to a colleague, rewrite it in the words you would say.
 7. Check the ending: stop at the last substantive point, not a moral ("Ultimately, ..."), a restatement, or an italicized zinger.
+8. If the text is documentation for international readers, run the second pass in [references/technical-documentation.md](references/technical-documentation.md).
 
 ## References
 
-The rules above are the principles and always apply; the reference files hold the inventories.
+The rules above are the principles and always apply; the reference files hold the inventories and the audience profiles.
 
-- [references/ai-tells.md](references/ai-tells.md): the full catalog behind the rules, with current word and phrase lists, sentence patterns, formatting habits, and tone tells, each with its fix. Read it whenever editing text that "sounds like ChatGPT", and to audit your own draft when the stakes warrant it. The word lists rot as models drift; the rules above are the durable form.
+- [references/ai-tells.md](references/ai-tells.md): the full catalog behind the rules, with current word and phrase lists, sentence patterns, formatting habits, tone tells, and model-specific artifacts (citation markup, language mixing, leaked reasoning), each with its fix. Read it whenever editing text that "sounds like ChatGPT", and to audit your own draft when the stakes warrant it. The word lists rot as models drift; the rules above are the durable form.
 - [references/elements-of-style.md](references/elements-of-style.md): composition guidance distilled from Strunk (paragraph unity, topic sentences, parallel structure, emphasis by position). Read it for anything past a few paragraphs: documentation, essays, reports.
+- [references/technical-documentation.md](references/technical-documentation.md): the audience profile for documentation that non-native readers, translators, or machine translation will use, following ASD-STE100 Simplified Technical English where feasible: 21 rules with STE rule numbers, the list of places it overrides the rules above, and its own revision pass. Read it before writing any user guide, install guide, API reference, or runbook.

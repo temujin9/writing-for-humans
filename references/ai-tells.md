@@ -14,6 +14,7 @@ Two cautions before applying it:
 - Sentence patterns
 - Structure and formatting
 - Tone
+- Model-specific tells
 - Worldbuilding and fiction
 
 ## Vocabulary
@@ -86,7 +87,19 @@ Delete these; the sentence usually survives intact.
 - Register inflation to sound authoritative: "utilize", "individuals", "commence" for "use", "people", "start". Specificity is the authority; formality is costume.
 - Decorative analogies and vivid images. An analogy earns its place only when it is the clearest available statement of the point; otherwise it is ornament.
 
+## Model-specific tells
+
+The tells above are shared across model families. These vary by family, as of September 2026, and they rot fastest of all: trust the fix over the attribution.
+
+- Markup artifacts. Citation and tool markup left in the answer: DeepSeek leaves lenticular brackets (【 】) and dagger symbols; Gemini leaves `[cite: 1]` markers; Grok and Perplexity leave JSON-like card and file-upload tokens (Wikipedia, "Signs of AI writing"). Fix: delete every artifact and cite in plain words, or in the venue's own citation format.
+- Language mixing. Models trained on large Chinese corpora sometimes switch script mid-answer. GLM-5.1 has a documented habit of dropping into Chinese for a sentence when the context mentions Chinese companies or domains (zai-org/GLM-5, issue 54), and Qwen has carried the same report since its first release (QwenLM/Qwen, issue 543). A system-prompt instruction reduces it but does not remove it. Fix: reread the output for any script the reader did not ask for and rewrite the sentence.
+- Learner-English transfer. Patterns documented in Chinese-English learner writing (dropped articles and plurals, "so" as the default connector, "Firstly / Secondly / Lastly" as paragraph openers) also appear in English from models whose training data leans Chinese. This is an inference from the learner-corpus literature, not a measurement of the models; treat it as a watch list. Fix: restore the articles and plurals, keep "so" for consequence only, and delete the enumerators.
+- Reasoning leakage. Models with thinking on by default (Kimi K3 returns reasoning on every call; DeepSeek and GLM in thinking mode) can let planning language into the answer: "The user wants...", "Let me think about...", "First, I should...". Community-observed rather than measured. Fix: the answer starts at the answer.
+- Default persona. Some chat templates inject a persona when the caller sends no system prompt (Kimi K2's template adds "You are Kimi, an AI assistant created by Moonshot AI"). If the output introduces itself or names its maker, cut the self-introduction.
+
 ## Worldbuilding and fiction
+
+This section is the audience profile for games, fiction, and worldbuilding; SKILL.md routes here.
 
 Creative prose has its own filler register: vagueness performing depth.
 These read as atmosphere and carry nothing.
@@ -107,3 +120,5 @@ These read as atmosphere and carry nothing.
 ## Sources
 
 Distilled July 2026 from [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), [Will Francis: How to stop Claude writing like an AI](https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/), and a sample of similar critiques; composition rules trace to Strunk (see elements-of-style.md).
+
+Model-specific tells added September 2026 from the same Wikipedia page, the [GLM-5](https://github.com/zai-org/GLM-5/issues/54) and [Qwen](https://github.com/QwenLM/Qwen/issues/543) issue trackers, the Kimi K2 and K3 model cards on Hugging Face, and the World Englishes literature on Chinese English (Albrecht 2023) with EFL error studies of Chinese learners.
