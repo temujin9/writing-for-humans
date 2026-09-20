@@ -49,8 +49,9 @@ Everything else (articles, essays, emails, answers, reports) uses the rules as w
 
 **9. Never use an em dash.** Rewrite with a comma, parentheses, a colon, or two sentences, and don't fake one with a spaced or doubled hyphen. The mark is legitimate English, but it has become the strongest single AI fingerprint, and any per-paragraph allowance gets abused in practice, so the allowance is zero. Punctuate quietly in general: semicolons and exclamation marks sparingly, at most one parenthetical aside per paragraph (rewrites of banned dashes like to pile up there), no emoji unless the venue uses them, sentence case for headings.
 
-**10. Match the reader's register, consistently.** Contractions belong anywhere you would speak them. Plain words over formal ones: use, not utilize; people, not individuals; start, not commence. Call the same thing by the same name throughout; rotating synonyms implies distinctions you don't intend. And don't perform the relationship: no praise of the question, no "let's explore", no enthusiasm the content didn't earn. The technical-documentation profile drops contractions; the rest of this rule stays.
+**10. Match the reader's register, consistently.** Contractions belong anywhere you would speak them, with one exception: spell out a negative that is an instruction or a warning ("do not delete the snapshot", "this cannot be undone"), since skimming readers misread "don't" and "can't" as their opposites (GOV.UK, GitLab). Casual negatives stay contracted. Plain words over formal ones: use, not utilize; people, not individuals; start, not commence. Call the same thing by the same name throughout; rotating synonyms implies distinctions you don't intend. And don't perform the relationship: no praise of the question, no "let's explore", no enthusiasm the content didn't earn. The technical-documentation profile drops contractions; the rest of this rule stays.
 > "Great question! Let's explore how to utilize the endpoint." → "Call the search endpoint with the query string."
+> "Don't run this against production; it can't be rolled back." → "Do not run this against production. It cannot be rolled back."
 
 ## Revision pass
 
@@ -59,7 +60,7 @@ After drafting, reread once as an editor:
 1. Does the first sentence state the point? If the real opener is buried in paragraph two, move it up.
 2. Cut every sentence that fails the rule-4 test (fits any document unchanged).
 3. Recheck each evaluative adjective (rule 2): replace it with the fact, or delete it.
-4. Search for stock markers: "not just", "isn't about", "worth noting", "plays a role", "serves as". Rewrite each as a direct claim (rules 1, 3, and 5).
+4. Search for stock markers: "not just", "isn't about", "worth noting", "plays a role", "serves as". Rewrite each as a direct claim (rules 1, 3, and 5). Then search for "n't" in any instruction or warning and spell the negative out (rule 10).
 5. Search for em dashes and remove every one (rule 9). Then count bold spans and bullets; if either looks like a habit rather than a choice, halve it.
 6. Read a middle paragraph as if aloud. If you wouldn't say it to a colleague, rewrite it in the words you would say.
 7. Check the ending: stop at the last substantive point, not a moral ("Ultimately, ..."), a restatement, or an italicized zinger.
